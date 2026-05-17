@@ -54,6 +54,18 @@
     <Compile Include="view\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\FrmAbsences.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmAbsences.Designer.cs">
+      <DependentUpon>FrmAbsences.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmPersonnel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmPersonnel.Designer.cs">
+      <DependentUpon>FrmPersonnel.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -65,6 +77,12 @@
     </Compile>
     <EmbeddedResource Include="view\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmAbsences.resx">
+      <DependentUpon>FrmAbsences.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmPersonnel.resx">
+      <DependentUpon>FrmPersonnel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
