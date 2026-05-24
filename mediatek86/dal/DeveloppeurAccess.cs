@@ -65,7 +65,7 @@ namespace mediatek86.dal
                     Console.WriteLine(e.Message);
                     Environment.Exit(0);
                 }
-            } /
+            } 
             return lesDeveloppeurs;
         }
 
