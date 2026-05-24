@@ -38,7 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cboMotif = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnModifierAbsence = new System.Windows.Forms.Button();
+            this.btnModifier = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAbsences)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,21 +127,21 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "Motif";
             // 
-            // btnModifierAbsence
+            // btnModifier
             // 
-            this.btnModifierAbsence.Location = new System.Drawing.Point(676, 314);
-            this.btnModifierAbsence.Name = "btnModifierAbsence";
-            this.btnModifierAbsence.Size = new System.Drawing.Size(75, 23);
-            this.btnModifierAbsence.TabIndex = 10;
-            this.btnModifierAbsence.Text = "Modifier";
-            this.btnModifierAbsence.UseVisualStyleBackColor = true;
+            this.btnModifier.Location = new System.Drawing.Point(689, 269);
+            this.btnModifier.Name = "btnModifier";
+            this.btnModifier.Size = new System.Drawing.Size(75, 23);
+            this.btnModifier.TabIndex = 10;
+            this.btnModifier.Text = "Modifier";
+            this.btnModifier.UseVisualStyleBackColor = true;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnModifierAbsence);
+            this.Controls.Add(this.btnModifier);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cboMotif);
             this.Controls.Add(this.label2);
@@ -172,6 +172,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cboMotif;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnModifierAbsence;
+        private System.Windows.Forms.Button btnModifier;
     }
 }

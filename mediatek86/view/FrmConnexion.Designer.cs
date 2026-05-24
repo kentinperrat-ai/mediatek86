@@ -61,6 +61,7 @@
             this.btnSeConnecter.TabIndex = 2;
             this.btnSeConnecter.Text = "se connecter";
             this.btnSeConnecter.UseVisualStyleBackColor = true;
+            this.btnSeConnecter.Click += new System.EventHandler(this.btnSeConnecter_Click_1);
             // 
             // txtMdp
             // 
