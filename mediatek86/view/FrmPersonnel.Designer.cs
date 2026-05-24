@@ -33,6 +33,16 @@
             this.btnModifier = new System.Windows.Forms.Button();
             this.btnSupprimer = new System.Windows.Forms.Button();
             this.btnGererAbsences = new System.Windows.Forms.Button();
+            this.txtNom = new System.Windows.Forms.TextBox();
+            this.txtPrenom = new System.Windows.Forms.TextBox();
+            this.txtTel = new System.Windows.Forms.TextBox();
+            this.txtMail = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cboService = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonnel)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,12 +51,12 @@
             this.dgvPersonnel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPersonnel.Location = new System.Drawing.Point(12, 12);
             this.dgvPersonnel.Name = "dgvPersonnel";
-            this.dgvPersonnel.Size = new System.Drawing.Size(776, 383);
+            this.dgvPersonnel.Size = new System.Drawing.Size(499, 308);
             this.dgvPersonnel.TabIndex = 0;
             // 
             // btnAjouter
             // 
-            this.btnAjouter.Location = new System.Drawing.Point(64, 401);
+            this.btnAjouter.Location = new System.Drawing.Point(12, 326);
             this.btnAjouter.Name = "btnAjouter";
             this.btnAjouter.Size = new System.Drawing.Size(97, 23);
             this.btnAjouter.TabIndex = 1;
@@ -55,7 +65,7 @@
             // 
             // btnModifier
             // 
-            this.btnModifier.Location = new System.Drawing.Point(228, 401);
+            this.btnModifier.Location = new System.Drawing.Point(134, 326);
             this.btnModifier.Name = "btnModifier";
             this.btnModifier.Size = new System.Drawing.Size(90, 23);
             this.btnModifier.TabIndex = 2;
@@ -64,7 +74,7 @@
             // 
             // btnSupprimer
             // 
-            this.btnSupprimer.Location = new System.Drawing.Point(415, 401);
+            this.btnSupprimer.Location = new System.Drawing.Point(252, 326);
             this.btnSupprimer.Name = "btnSupprimer";
             this.btnSupprimer.Size = new System.Drawing.Size(96, 23);
             this.btnSupprimer.TabIndex = 3;
@@ -73,18 +83,110 @@
             // 
             // btnGererAbsences
             // 
-            this.btnGererAbsences.Location = new System.Drawing.Point(615, 401);
+            this.btnGererAbsences.Location = new System.Drawing.Point(397, 326);
             this.btnGererAbsences.Name = "btnGererAbsences";
             this.btnGererAbsences.Size = new System.Drawing.Size(114, 23);
             this.btnGererAbsences.TabIndex = 4;
             this.btnGererAbsences.Text = "Gérer les absences";
             this.btnGererAbsences.UseVisualStyleBackColor = true;
             // 
+            // txtNom
+            // 
+            this.txtNom.Location = new System.Drawing.Point(661, 60);
+            this.txtNom.Name = "txtNom";
+            this.txtNom.Size = new System.Drawing.Size(100, 20);
+            this.txtNom.TabIndex = 5;
+            // 
+            // txtPrenom
+            // 
+            this.txtPrenom.Location = new System.Drawing.Point(661, 86);
+            this.txtPrenom.Name = "txtPrenom";
+            this.txtPrenom.Size = new System.Drawing.Size(100, 20);
+            this.txtPrenom.TabIndex = 6;
+            this.txtPrenom.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // txtTel
+            // 
+            this.txtTel.Location = new System.Drawing.Point(661, 112);
+            this.txtTel.Name = "txtTel";
+            this.txtTel.Size = new System.Drawing.Size(100, 20);
+            this.txtTel.TabIndex = 7;
+            // 
+            // txtMail
+            // 
+            this.txtMail.Location = new System.Drawing.Point(661, 139);
+            this.txtMail.Name = "txtMail";
+            this.txtMail.Size = new System.Drawing.Size(100, 20);
+            this.txtMail.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(590, 63);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Nom";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(590, 89);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Prénom";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(590, 119);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(22, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Tel";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(590, 146);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(26, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Mail";
+            // 
+            // cboService
+            // 
+            this.cboService.FormattingEnabled = true;
+            this.cboService.Location = new System.Drawing.Point(661, 174);
+            this.cboService.Name = "cboService";
+            this.cboService.Size = new System.Drawing.Size(100, 21);
+            this.cboService.TabIndex = 13;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(593, 177);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(41, 13);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "service";
+            // 
             // FrmPersonnel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.cboService);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtMail);
+            this.Controls.Add(this.txtTel);
+            this.Controls.Add(this.txtPrenom);
+            this.Controls.Add(this.txtNom);
             this.Controls.Add(this.btnGererAbsences);
             this.Controls.Add(this.btnSupprimer);
             this.Controls.Add(this.btnModifier);
@@ -94,6 +196,7 @@
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonnel)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -104,5 +207,15 @@
         private System.Windows.Forms.Button btnModifier;
         private System.Windows.Forms.Button btnSupprimer;
         private System.Windows.Forms.Button btnGererAbsences;
+        private System.Windows.Forms.TextBox txtNom;
+        private System.Windows.Forms.TextBox txtPrenom;
+        private System.Windows.Forms.TextBox txtTel;
+        private System.Windows.Forms.TextBox txtMail;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cboService;
+        private System.Windows.Forms.Label label5;
     }
 }
