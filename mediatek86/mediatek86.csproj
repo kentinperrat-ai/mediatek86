@@ -48,11 +48,11 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="view\Form1.cs">
+    <Compile Include="view\FrmConnexion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="view\FrmConnexion.Designer.cs">
+      <DependentUpon>FrmConnexion.cs</DependentUpon>
     </Compile>
     <Compile Include="view\FrmAbsences.cs">
       <SubType>Form</SubType>
@@ -75,8 +75,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="view\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="view\FrmConnexion.resx">
+      <DependentUpon>FrmConnexion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\FrmAbsences.resx">
       <DependentUpon>FrmAbsences.cs</DependentUpon>
