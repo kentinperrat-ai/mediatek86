@@ -1,4 +1,6 @@
-﻿using mediatek86.bddmanager;
+﻿
+using mediatek86.bddmanager;
+using mediatek86.model;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -56,8 +58,8 @@ namespace mediatek86.dal
         }
         public bool Authentifier(string login, string pwd)
         {
-            // On ne hache plus, on utilise 'pwd' tel quel
-            // Votre requête compare maintenant la saisie avec le '1234' en clair
+            
+          //recupere  mot de passe et login de la table responsable
             string req = "SELECT * FROM responsable WHERE login = '" + login + "' AND pwd = '" + pwd + "';";
 
             // On récupère le résultat
@@ -70,11 +72,65 @@ namespace mediatek86.dal
         /// Récupère tout le personnel.
         /// </summary>
         /// <returns>Liste des membres du personnel.</returns>
-        public List<object[]> GetPersonnel()
+        /// <summary>
+        /// Récupère tout le personnel.
+        /// </summary>
+        /// <returns>Liste des membres du personnel.</returns>
+        public List<Personnel> GetPersonnel()
         {
-            // On retourne la liste d'object[] comme attendu par la signature de BddManager
-    return Manager.ReqSelect("SELECT * FROM personnel;");
-}
+            string requete = "SELECT * FROM personnel";
+            // On suppose que 'Manager' est l'objet qui exécute vos requêtes
+            var result = Manager.ReqSelect(requete);
+
+            List<Personnel> lesPersonnels = new List<Personnel>();
+
+            if (result != null)
+            {
+                foreach (var row in result)
+                {
+                    // Remplacez les indices [0], [1]... par les indices correspondant à votre table SQL
+                    lesPersonnels.Add(new Personnel(
+                        Convert.ToInt32(row[0]),
+                        row[1].ToString(),
+                        row[2].ToString()
+                    // ... ajoutez les autres champs ici
+                    ));
+                }
+            }
+            return lesPersonnels;
+        }
+
+
+        public bool AjouterPersonnel(string nom, string prenom, string tel, string mail, int idService)
+        {
+            // Attention : utilisez des guillemets simples pour les chaînes SQL
+            string req = "INSERT INTO personnel (nom, prenom, tel, mail, id_service) VALUES ('" + nom + "', '" + prenom + "', '" + tel + "', '" + mail + "', " + idService + ");";
+            return Manager.ReqUpdate(req) > 0;
+        }
+        /// <summary>
+        /// Récupère la liste des services.
+        /// </summary>
+        /// <returns>Liste des services.</returns>
+        public List<Service> GetServices()
+        {
+            string requete = "SELECT * FROM service";
+            var result = Manager.ReqSelect(requete);
+            List<Service> lesServices = new List<Service>();
+
+            if (result != null)
+            {
+                foreach (var row in result)
+                {
+                    // Adaptez les indices [0] et [1] selon l'ordre de vos colonnes dans la table service
+                    lesServices.Add(new Service(
+                        Convert.ToInt32(row[0]),
+                        row[1].ToString()
+                    ));
+                }
+            }
+            return lesServices;
+        }
 
     }
+
 }

@@ -21,5 +21,10 @@ namespace mediatek86.view
         {
 
         }
+
+        private void dgvAbsences_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

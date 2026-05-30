@@ -49,6 +49,7 @@
             this.dgvAbsences.Name = "dgvAbsences";
             this.dgvAbsences.Size = new System.Drawing.Size(438, 280);
             this.dgvAbsences.TabIndex = 0;
+            this.dgvAbsences.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAbsences_CellContentClick);
             // 
             // btnAjouterAbsence
             // 

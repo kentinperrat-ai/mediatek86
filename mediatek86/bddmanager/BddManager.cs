@@ -47,7 +47,7 @@ namespace mediatek86.bddmanager
         /// </summary>
         /// <param name="stringQuery">requête autre que select</param>
         /// <param name="parameters">dictionnire contenant les parametres</param>
-        public void ReqUpdate(string stringQuery, Dictionary<string, object> parameters = null)
+        public int ReqUpdate(string stringQuery, Dictionary<string, object> parameters = null)
         {
             MySqlCommand command = new MySqlCommand(stringQuery, connection);
             if (!(parameters is null))
@@ -58,7 +58,9 @@ namespace mediatek86.bddmanager
                 }
             }
             command.Prepare();
-            command.ExecuteNonQuery();
+
+           
+            return command.ExecuteNonQuery();
         }
 
         /// <summary>

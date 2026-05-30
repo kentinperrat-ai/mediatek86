@@ -99,6 +99,8 @@
     <Compile Include="bddmanager\BddManager.cs" />
     <Compile Include="controller\FrmConnexionController.cs" />
     <Compile Include="dal\Access.cs" />
+    <Compile Include="dal\Service.cs" />
+    <Compile Include="model\Personnel.cs" />
     <Compile Include="model\Profil.cs" />
     <Compile Include="model\Developpeur.cs" />
     <Compile Include="dal\DeveloppeurAccess.cs" />

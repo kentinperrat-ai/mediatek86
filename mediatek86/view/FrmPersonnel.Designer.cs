@@ -43,12 +43,23 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cboService = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.colNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colService = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonnel)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvPersonnel
             // 
             this.dgvPersonnel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPersonnel.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colNom,
+            this.colPrenom,
+            this.colTel,
+            this.colMail,
+            this.colService});
             this.dgvPersonnel.Location = new System.Drawing.Point(12, 12);
             this.dgvPersonnel.Name = "dgvPersonnel";
             this.dgvPersonnel.Size = new System.Drawing.Size(499, 308);
@@ -63,10 +74,11 @@
             this.btnAjouter.TabIndex = 1;
             this.btnAjouter.Text = "Ajouter";
             this.btnAjouter.UseVisualStyleBackColor = true;
+            this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
             // btnModifier
             // 
-            this.btnModifier.Location = new System.Drawing.Point(134, 326);
+            this.btnModifier.Location = new System.Drawing.Point(129, 326);
             this.btnModifier.Name = "btnModifier";
             this.btnModifier.Size = new System.Drawing.Size(90, 23);
             this.btnModifier.TabIndex = 2;
@@ -173,6 +185,31 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "service";
             // 
+            // colNom
+            // 
+            this.colNom.HeaderText = "Nom";
+            this.colNom.Name = "colNom";
+            // 
+            // colPrenom
+            // 
+            this.colPrenom.HeaderText = "Prénom";
+            this.colPrenom.Name = "colPrenom";
+            // 
+            // colTel
+            // 
+            this.colTel.HeaderText = "Tel";
+            this.colTel.Name = "colTel";
+            // 
+            // colMail
+            // 
+            this.colMail.HeaderText = "Mail";
+            this.colMail.Name = "colMail";
+            // 
+            // colService
+            // 
+            this.colService.HeaderText = "Service";
+            this.colService.Name = "colService";
+            // 
             // FrmPersonnel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -219,5 +256,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cboService;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPrenom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colService;
     }
 }
