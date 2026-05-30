@@ -1,7 +1,7 @@
-﻿
-using mediatek86.bddmanager;
+﻿using mediatek86.bddmanager;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -54,6 +54,27 @@ namespace mediatek86.dal
             }
             return instance;
         }
+        public bool Authentifier(string login, string pwd)
+        {
+            // On ne hache plus, on utilise 'pwd' tel quel
+            // Votre requête compare maintenant la saisie avec le '1234' en clair
+            string req = "SELECT * FROM responsable WHERE login = '" + login + "' AND pwd = '" + pwd + "';";
+
+            // On récupère le résultat
+            var result = Manager.ReqSelect(req);
+
+            // On vérifie si la liste n'est pas nulle et contient au moins un élément
+            return (result != null && result.Count > 0);
+        }
+        /// <summary>
+        /// Récupère tout le personnel.
+        /// </summary>
+        /// <returns>Liste des membres du personnel.</returns>
+        public List<object[]> GetPersonnel()
+        {
+            // On retourne la liste d'object[] comme attendu par la signature de BddManager
+    return Manager.ReqSelect("SELECT * FROM personnel;");
+}
 
     }
 }

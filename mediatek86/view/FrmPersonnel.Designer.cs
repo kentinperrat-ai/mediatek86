@@ -53,6 +53,7 @@
             this.dgvPersonnel.Name = "dgvPersonnel";
             this.dgvPersonnel.Size = new System.Drawing.Size(499, 308);
             this.dgvPersonnel.TabIndex = 0;
+            this.dgvPersonnel.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPersonnel_CellContentClick);
             // 
             // btnAjouter
             // 
@@ -194,6 +195,7 @@
             this.Controls.Add(this.dgvPersonnel);
             this.Name = "FrmPersonnel";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.FrmPersonnel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonnel)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
