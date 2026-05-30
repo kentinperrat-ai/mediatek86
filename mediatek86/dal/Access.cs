@@ -62,10 +62,10 @@ namespace mediatek86.dal
           //recupere  mot de passe et login de la table responsable
             string req = "SELECT * FROM responsable WHERE login = '" + login + "' AND pwd = '" + pwd + "';";
 
-            // On récupère le résultat
+            //  récupèration du résultat
             var result = Manager.ReqSelect(req);
 
-            // On vérifie si la liste n'est pas nulle et contient au moins un élément
+            //  vérification si la liste n'est pas nulle et contient au moins un élément
             return (result != null && result.Count > 0);
         }
         /// <summary>
@@ -79,7 +79,7 @@ namespace mediatek86.dal
         public List<Personnel> GetPersonnel()
         {
             string requete = "SELECT * FROM personnel";
-            // On suppose que 'Manager' est l'objet qui exécute vos requêtes
+           
             var result = Manager.ReqSelect(requete);
 
             List<Personnel> lesPersonnels = new List<Personnel>();
@@ -88,12 +88,12 @@ namespace mediatek86.dal
             {
                 foreach (var row in result)
                 {
-                    // Remplacez les indices [0], [1]... par les indices correspondant à votre table SQL
+                    
                     lesPersonnels.Add(new Personnel(
                         Convert.ToInt32(row[0]),
                         row[1].ToString(),
                         row[2].ToString()
-                    // ... ajoutez les autres champs ici
+                    
                     ));
                 }
             }
@@ -103,7 +103,7 @@ namespace mediatek86.dal
 
         public bool AjouterPersonnel(string nom, string prenom, string tel, string mail, int idService)
         {
-            // Attention : utilisez des guillemets simples pour les chaînes SQL
+           
             string req = "INSERT INTO personnel (nom, prenom, tel, mail, id_service) VALUES ('" + nom + "', '" + prenom + "', '" + tel + "', '" + mail + "', " + idService + ");";
             return Manager.ReqUpdate(req) > 0;
         }
@@ -121,7 +121,7 @@ namespace mediatek86.dal
             {
                 foreach (var row in result)
                 {
-                    // Adaptez les indices [0] et [1] selon l'ordre de vos colonnes dans la table service
+                    
                     lesServices.Add(new Service(
                         Convert.ToInt32(row[0]),
                         row[1].ToString()

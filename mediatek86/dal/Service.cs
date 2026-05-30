@@ -5,7 +5,7 @@
         public int Id { get; set; }
         public string Nom { get; set; }
 
-        // Ajoutez ce constructeur :
+     
         public Service(int id, string nom)
         {
             Id = id;

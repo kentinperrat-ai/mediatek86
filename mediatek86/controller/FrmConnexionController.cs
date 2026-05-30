@@ -30,7 +30,7 @@ namespace mediatek86.controller
         /// </summary>
         public void ControleConnexion(string login, string pwd)
         {
-            // Appel à la base de données via le Singleton Access
+            // Appel à la base de données 
             if (Access.GetInstance().Authentifier(login, pwd))
             {
                 MessageBox.Show("Connexion réussie !");

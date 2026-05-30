@@ -8,10 +8,13 @@ namespace mediatek86.model
 {
     public class Personnel
     {
-        public int Id { get; set; }
-        public string Nom { get; set; }
-        public string Prenom { get; set; }
-        // Ajoutez les autres propriétés selon les colonnes de votre table SQL (tel, mail, idService...)
+        public int Id { get; set; } //propriété pour l'ID
+        public string Nom { get; set; } //propriété pour le Nom
+        public string Prenom { get; set; }// propriété pour le prénom
+        public string Tel { get; set; }  // propriété pour le tel
+        public string Mail { get; set; } // propriétés pour le mail
+        public string Service { get; set; } //propriété 
+    
 
         public Personnel(int id, string nom, string prenom)
         {
